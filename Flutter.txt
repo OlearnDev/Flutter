@@ -1,0 +1,65 @@
+----------- Flutter : Moble App Dev ----------
+
+1. Install GIT and powershell idf not present on the machine
+2.Download and install flutter on https://docs.flutter.dev/get-started or search and install "Flutter" with dart code in VSCode command panel
+ 
+  - On the web site, in section "Install the Flutter SDK#", click tab "Download and Install" to download "flutter-windows*-stable.zip"
+ 
+  - Unzip in a folder like c:\programs\flutter and add c:\programs\flutter\bin in the windows path of the machine
+
+Check flutter is located using :
+
+	c:\> where flutter dart or 
+	c:\> flutter doctor				<--- Install missing softs in red (ex: Android Studio)
+
+NB : Install missing softs starting by "Android Studio" and using "Android Studio", click on "More Actions" --> "SDK Manager" -> Menu SDK Tools 
+     in the welcome page to select other products to install : 
+		- Android SDK command-line tools
+		- Google USD Driver   (helps send app on mobile using usb cable)
+		
+		Click on "Apply" and "Finish" and the "OK"
+		
+		To install " Android toolchain", if you installed Android in a custom folder "C:\Programs\Android", enter :
+		
+		c:\> flutter config --android-sdk C:\Programs\Android 
+		
+		To accept licenses :
+		
+		c:\> flutter doctor --android-licenses			<--- Enter y to accept each time prompted
+		
+NB : We don''t need here to install Visual Studio which is necessary for Win form apps (not vscode)
+
+---------- Install Flutter plugin in Android Studio
+
+We need to install a plugin in Android Studio to allow dev with Flutter. 
+
+In Android Studio, click on plugin in left menu and search and install Flutter. It will ask or will automatically install dart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
