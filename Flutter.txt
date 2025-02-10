@@ -47,11 +47,11 @@ Click on "New project flutter"  --> Select Flutter in left panel -->  select Flu
 We need to enable dev mode on our android mobile :
 
 	- On mobile settings, enter search and select build number. Click many times on build numer or "Numero de version" to be
-	  ask to enter password or mobile scheme. You will receive the message "Developer mode enabled"
+	  asked to enter password or mobile scheme. You will receive the message "Developer mode enabled"
 
-	- On Settings, scroll to the botton to select "Development options". Scroll to enable "Debug USB2"
+	- On Settings, scroll to the bottom to select "Development options". Scroll to enable "Debug USB2"
 	- Connect the mobile android to the machine and notice mobile name appears in the top list "Select Device"  
-	- Click on RUN button to lauch app on android and see the demo app on mobile
+	- Click on RUN button to launch app on android and see the demo app on mobile
 	
 ---------- Run the app on an emulator -----
 
@@ -67,7 +67,7 @@ NB: You have to free enough space (> = 10) on disk to avoid error like "The emul
 
 Open vscode and install plugins flutter (which installs dart)
 
-Open a new terminal in flutter dir and create an application called "flutproj" : 
+To create an application : Open a new terminal in flutter dir and create an application called "flutproj" : 
 
   PS> cd C:\Cours\Flutter
   PS> flutter create flutproj
@@ -99,9 +99,19 @@ Open a new terminal in flutter dir and create an application called "flutproj" :
 
 	Open the application folder via File --> Open folder --> click on "lib" --> click on "main.dart" to see app code
 
-	Check on the right bottom the device selection list 
+	Check on the right bottom the device selection list. Click on "No device" and select the device created "Pixel 5 API 35"
 
 
+--------- DART Language -------------------
+
+Introduction
+
+Dart is a programming language created by Google. It is used to develop web applications, mobile applications, and games.
+
+	Easy to learn.
+	Very efficient. (machine language)
+	Multiplatform.
+	Great community.
 	
 
 
