@@ -7,10 +7,13 @@
  
   - Unzip in a folder like c:\programs\flutter and add c:\programs\flutter\bin in the windows path of the machine
 
+
+------------ Flutter with Android Studio ----------
+
 Check flutter is located using :
 
 	c:\> where flutter dart or 
-	c:\> flutter doctor				<--- Install missing softs in red (ex: Android Studio)
+	c:\> flutter doctor				<--- Install missing softs in red 
 
 NB : Install missing softs starting by "Android Studio" and using "Android Studio", click on "More Actions" --> "SDK Manager" -> Menu SDK Tools 
      in the welcome page to select other products to install : 
@@ -33,23 +36,73 @@ NB : We don''t need here to install Visual Studio which is necessary for Win for
 
 We need to install a plugin in Android Studio to allow dev with Flutter. 
 
-In Android Studio, click on plugin in left menu and search and install Flutter. It will ask or will automatically install dart
+ - In Android Studio, click on plugin in left menu and search and install Flutter. It will ask or will automatically install dart
+ - Restart IDE 
+
+Start new project Flutter :
+
+Click on "New project flutter"  --> Select Flutter in left panel -->  select Flutter SDK or install folder (C:\Programs\flutter)
 
 
+We need to enable dev mode on our android mobile :
+
+	- On mobile settings, enter search and select build number. Click many times on build numer or "Numero de version" to be
+	  ask to enter password or mobile scheme. You will receive the message "Developer mode enabled"
+
+	- On Settings, scroll to the botton to select "Development options". Scroll to enable "Debug USB2"
+	- Connect the mobile android to the machine and notice mobile name appears in the top list "Select Device"  
+	- Click on RUN button to lauch app on android and see the demo app on mobile
+	
+---------- Run the app on an emulator -----
+
+In the top right planel, click on "Device Manager" icon and click "+" to create a virtual device. 
+
+In the select hardware, select "Phone" -> "Pixel 5" -> Select and download the recommended OS (API 35) and finish
+
+In the "Select device" list, select the virtual device created and run the demo. Flutter will run the app on the virtual device 
+
+NB: You have to free enough space (> = 10) on disk to avoid error like "The emulator process for avd has terminated" 
+
+------------ Flutter with VSCODE ---------------------------
+
+Open vscode and install plugins flutter (which installs dart)
+
+Open a new terminal in flutter dir and create an application called "flutproj" : 
+
+  PS> cd C:\Cours\Flutter
+  PS> flutter create flutproj
+  
+		....
+
+		In order to run your application, type:
+
+		$ cd flutproj
+		$ flutter run		
+	
+		Your application code is in flutproj\lib\main.dart.
+
+		The configured version of Java detected may conflict with the Gradle version in your new Flutter app.
+
+		To keep the default AGP version Gradle version 8.3, download a compatible Java version
+		(Java 17 <= (Java 17 <= compatible Java version < Java 21) Java version < Java 21). Configure this Java version
+		globally for Flutter by running:
+
+		  flutter config --jdk-dir=<JDK_DIRECTORY>
+
+		....
 
 
+	PS C:\Cours\Flutter> cd flutproj
+	PS C:\Cours\Flutter\flutproj> flutter run		<-- Keep your mobile connected via usb to see demo app launced in mobile
+	
 
 
+	Open the application folder via File --> Open folder --> click on "lib" --> click on "main.dart" to see app code
+
+	Check on the right bottom the device selection list 
 
 
-
-
-
-
-
-
-
-
+	
 
 
 
