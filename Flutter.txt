@@ -114,15 +114,242 @@ Dart is a programming language created by Google. It is used to develop web appl
 	Great community.
 	
 
+DartPad : Online editor for coding with Dart. You can download and install dartpad on "Dart dev" web site
 
 
+Variables ------------
+
+On peut declarer les variables avec : 
+	var
+	les types
+
+void main() {
+
+	//Typed :
+	String user = "Jean Claude";
+	int age = 50;
+	bool single = false;
+	double size = 1.50454;
+	
+	// Dynamic variables :
+	dynamic value = "Dad";
+	value = 50;
+	value = true;
+
+	//Constants :
+	const String sex = "M";
+
+}
+
+Operators -------------------
+
+	// Operators
+
+	//. Arithmetic
+
+	print(3 + 3);
+	print(4 * 4);
+	print(16 / 2);
+	print(84);
+	print(10% 3); // Modulo
+
+	//. Comparison
+
+	print(2 == 4);
+	print(2 != 4);
+	print(2 < 4); 
+	print(2 > 4);
+	
+
+// Logic
+
+	print(2 == 3 && 4 == 5);
+	print(3 == 5 || 4 == 7);
+	print(!true);
+
+// Conditions simples
+
+int age = 75;
+
+	if (age > 18) {
+	print("You are of legal age");
+	} else if(age < 5){
+	print("It's a baby ");
+	}else if(age > 70){
+	print("He's an old man");
+	}
+	else {
+	print("You are a minor ");
+	}
 
 
+// Ternary conditions
+
+	print(age > 18 ? "You are an adult" :"You are a minor ");
+
+// String
+
+String name = "Jonathan";
+String nom2 = 'Jean';
+String biographer = """My name is
+Gedeon """
+
+String bio = '''My name
+is Gedeon
+print(bio);'''
 
 
+String name = "Jonathan";
+
+print("My name is $lname");
+print("2 + 4 = ${2 + 4}");
+
+// The size
+	print(nom.length);
+
+// Concatenation
+	print("Mom" + "Dad"); 
+
+// Conversation
+	String text = "123"
+	int text2 = int.parse(text);
+	
+	
+// Indexing
+String pays = "France";
+print(pays[1]);					--> r
+
+// Subsctring
+print(pays.substring(0,3));		--> Fra
+	
+// Lists
+
+	var cotes = [10, 12, 13, 14, 16, 9, 0, 1, 17];
+	print(cotes);
+	var presence = ("John", "Paul", "Gedeon"];
+
+// Indexing
+	print(cotes[1]);
+	print(presence[1]);
+	cotes[1] = 50;
+	print(cotes);
+
+// Remove
+	cotes.remove(0);
+	print(cotes);
+
+// Add
+	cotes.add(20);		--> Adds at the end
+	print(cotes);	
+	
+
+// Size
+print(cotes.length);
+
+// List Types
+
+	List<int> maList = [1,2,3,4,5,6,7,];
+	List<String> maList2 = ["a", "b", "c"];
+	List<double> maList2 = [2.4, 6.7, 4.6,];
+	List<Object> maList3 = [1, 4.5, "Papa", true);	
+	
+Maps
+
+- In Dart a Map object is a collection of key-value pairs. Keys and values can be of any type.
+- Maps can be created using curly braces ({}) and contain a comma-separated list of key-value pairs.	
+
+// Maps
+
+var person = {
+	"name": "Jonathan",
+	"age": 25,
+	"sex": "Male",
+	"size": 1.6,
+	"active": true,
+};
+
+// Display
+
+	print(person);
+	print(person['name']);	
+	
+// Methods
+
+	// * check
+
+		print(person.containsKey("name"));
+		print(person.containsValue(1.6));
+
+	// * DELETE
+
+		person.remove("age");
+		print(person);
+
+	// * To modify
+
+		person.update("active", (value) => false);
+		print(person);
+
+	// Types
+
+		Map<String, int> map = {			--> Key is string and value is int
+		"a": 1,
+		"b": 2,
+		"c": 3,
+		};
+
+	Map<String, Object> map3 = {
+
+		"key1":"OK",
+		"key2":true,
+		"key3":3.6
+
+	}:
+
+// Map Lists
+
+	var messages = [
+
+		{
+		"user": "John",
+		"message": "Hello mom",
+		"status": 1,
+		"date": "02/09/2023"
+		},
+
+		{
+		"user": "Naomie",
+		"message": "Hello my son",
+		"status": 0,
+		"date": "03/09/2023"
+		},
+
+	];	
+		
+print(messages[0]);
+print(messages[0]["user"));			--> John
+	
+-- Define type 
+
+List<Map<String, Object>> articles = [];
+
+	articles.add({
+		"author": "Gedeon",
+		"date": "03/09/2023",
+		"title": "Learn Flutter",
+		"body": "You need to learn Dart before Flutter"
+	});
+
+	print(articles[0]);
+	
 
 
+---------- Loops
 
+The loop is a control structure that allows a block of code to be executed multiple times.
+There are three types of Dart loops:
 
-
-
+	1. The while loop
+	2. The for loop
+	3. The do-while loop	
+	
