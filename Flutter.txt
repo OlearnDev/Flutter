@@ -352,4 +352,95 @@ There are three types of Dart loops:
 	1. The while loop
 	2. The for loop
 	3. The do-while loop	
+
+--- While : 
+
+	int i = 0;
 	
+	while(i < 10) {
+		if ( i == 5){
+			break;
+			}
+		print("Double of $i = ${i * 2}");
+		i = i + 1;
+	}	
+
+
+--- For
+
+// For
+
+1.
+	for(int i=0; i<3; i++){
+		print("ok");
+	}
+
+2.
+	List<String> fruits = ["banana", "Apple", "Orange"];
+
+	for (String fruit in fruits) {
+		print(fruit);
+	}	
+
+
+// Do while
+
+int j=0;
+
+do {
+	print("do while loop");
+	j = j + 1;
+}while(j<10);
+
+
+-------- Functions ---------
+
+void main() {
+
+	// Functions
+	hello();
+	sayHello("Jonathan");
+	print(somme(5, 3));
+
+}
+
+void hello(){ 
+	print("Hello");
+	}
+
+void sayHello(String name) {
+	print("Hello $name");
+	}
+
+int somme(int a, int b) {			--> Same with : int somme(int a, int b) => a + b;    if function on only 1 line
+	return a + b;	
+	}
+
+------ Function anonymous 
+
+List<int> list = [1,2,3,4,5,6];
+
+1. Using foreach with normal function "action":
+
+	void action(int number){
+		print(number);
+	}
+
+	list.forEach((action);
+
+2. Using anonymous with foreach:
+
+	list.forEach((int number) {
+	print(number);
+	});
+
+
+
+
+
+
+
+
+
+
+
