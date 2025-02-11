@@ -435,6 +435,80 @@ List<int> list = [1,2,3,4,5,6];
 	});
 
 
+-------------- POO --------------------------
+
+void main() {
+
+	// Class
+	User user1 = User("Jonathan", 25, true);
+	print(user1.name);
+	
+	User user2 = User("Jean", 30, false);
+	print(user2.profile());
+	user2.changeStatus = true;					<--- Setter plus bas, utilisation de =
+	print(user2.active);
+	
+	// Heritage
+	Admin admin2 = Admin("Gedeon", 50, true);
+	print(admin2.profile());
+ 
+ 
+ }  // End void main
+
+	class User{
+
+	// Properties
+	String name;
+	int age;
+	bool status;
+
+	User(this.name, this.age, this.status);			<-- Constructor
+
+	// Methods
+
+	String profile(){
+		return "Profile de ${name}";
+	    }
+
+	// Getters et Setters
+
+	String get active => status? "YES": "NO";
+
+	set changeStatus(bool value) status => value = value;
+	
+	}
+
+
+
+
+	- Getters and Setters : Permettent de lire ou modifier les propriétés d''une méthode 
+	- Les getters sont définis sans paramètres contrairement aux autres méthodes
+
+	// L''héritage
+	
+	class Admin extends User {
+		Admin(String name, int age, bool status): super (name, age, status);		<-- Définir le construteur de la nlle classe
+		
+		//Surcharge
+		@override
+		profile(){										<-- Pas besoin de preciser le type string car se refere au type parent
+			return "Profile de l'admin ${name}";
+		}
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
