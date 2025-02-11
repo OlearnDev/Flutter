@@ -542,16 +542,55 @@ void main() {
 	print(message);
 }
 
+-----------------Exceptions
+
+In Dart, an exception is an unexpected event that can occur during the execution of a program.
+
+It can be caused by a programming error, incorrect user input, or external conditions.
 
 
+void main() {
+
+// Exceptions
+
+	try{
+		dynamic x = "ok";
+		x = x + 1;
+	} catch (e) {
+		print("An error occurs");
+	}
+
+	print("Continue");
+
+}
+
+----------------- Flutter : Introduction ---------------
+
+The Developer Account : 
+Allows developers to create, publish, and manage apps on Apple and Google''s respective platforms.
+
+Account Types :
+
+	- Developer account --> Particular
+	- Developer account --> Organization
 
 
+Play Developer Account
+
+	Google Play Account Creation Fee Expand
+
+	$25 For an individual
+	$25 For an organization
+
+Apple Developer Program
+
+	Apple Developer Program Enrollment Fee / Year
+
+	$99 For an individual
+	$299 For an organization
 
 
-
-
-
-
+Google : play.google.com/console/signup 
 
 
 
