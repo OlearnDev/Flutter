@@ -498,8 +498,49 @@ void main() {
 	}
 
 
+-------------------- Null safety  ----------------------
+
+Null safety in Dart is a feature that helps detect and handle null values.
+
+Before the introduction of Null safety, null values were allowed in all data types, which could lead to hard-to-detect errors.
 
 
+
+void main() {
+
+// Null safety
+
+	int? a;					<--- To allow a to accept null , use ? with the type
+
+	a = null;
+	print('a = $a');
+	
+	List<String?> list = ["a", null, "c"];		<--- ? inside <> : an element in the list can be null
+	print(list);
+
+	String first = list.first!;					<--- ! : tells dart to accept null from nullable list. NB : list.first = list[0]
+	print(first);										list[1] : will throw an error as string type can''t accept null
+
+	List<String>? liste2;						<--- ? after <> : all the list can be null
+	print(liste2);
+	
+	print(liste2?.length);						<--- ? : returns null if one element is null
+
+	print(liste2 ?? "List is empty");			<--- prints "List is empty" instead of null if one elt is null in list2
+	print(liste2 != null ? list2 :"List is empty"); <---same result as above
+	
+	print(liste2?.length ?? "Not possible");	<--- ? : returns "Not possible" if one element is null
+	
+
+
+// Late
+
+	late String message;			<-- Late tells dart that you will affect later a value to the var before using
+
+	message = "Ok";
+
+	print(message);
+}
 
 
 
