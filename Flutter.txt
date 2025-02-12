@@ -595,6 +595,72 @@ Links to create dev accounts :
 	Apple  : developer.apple.com/programs/
 
 
+------------ Créer une application Flutter --------------
+
+	VS-CODE
+	GOOGLE IDX	: Editeur qui permet de créer une app flutter en ligne
+	
+
+VS-CODE : 
+
+Open a terminal and run : 
+
+	> flutter doctor 	<-- Check to install any relevant feature 
+	> mkdir Flutter	: folder for app Flutter (here C:\Cours\Flutter)
+	
+	Navigate and open folder in vscode explorer. Open a terminal and check folder dest is : PS C:\Cours\Flutter\> 
+	
+	PS> cd C:\Cours\Flutter
+	PS> flutter create flutproj
+	
+- Comment on content of flutproj folder :
+
+	- FLUTPROJ : Our mobile app within other folders and files
+	- android : will contain config files for android. Same for ios, linux, web, etc.
+	- lib : folder for our code. 
+		- main.dart : main code file 
+		- .gitignore : for GIT
+		- pubspec.yaml : config file for our app
+	
+	
+- Device selection : check bottom menu to see and select device where "No device" appears if flutter is installed
+		- Select a device emulator 
+		
+- Run the app using terminal : 
+		
+	PS C:\Cours\Flutter> cd flutproj
+	PS C:\Cours\Flutter\flutproj> flutter run		<-- Keep your mobile emulator opened to see demo app launced in mobile
+	
+	To quit or stop app running : ctrl ^c
+
+GOOGLE IDX
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
