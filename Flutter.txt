@@ -589,8 +589,10 @@ Apple Developer Program
 	$99 For an individual
 	$299 For an organization
 
+Links to create dev accounts :
 
-Google : play.google.com/console/signup 
+	Google : play.google.com/console/signup
+	Apple  : developer.apple.com/programs/
 
 
 
