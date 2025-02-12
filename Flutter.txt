@@ -633,7 +633,14 @@ Open a terminal and run :
 	
 	To quit or stop app running : ctrl ^c
 
-GOOGLE IDX
+
+GOOGLE IDX : idx.google.com
+
+	> Click on "See all templates" > Mobile > Flutter
+	
+	Name your workspace : FlutterApp1
+	
+	
 
 
 
