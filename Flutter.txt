@@ -640,12 +640,108 @@ GOOGLE IDX : idx.google.com
 	
 	Name your workspace : FlutterApp1
 	
+
+
+----------- Widget
+
+Is a class that describes a part of the user interface.
+
+Type of Widgets
+
+	• Stateless Widget 	: static
+	• Stateful Widget	: can change
+
+Code flutter: Display "Bonjour"------------------------
+
+	import 'package:flutter/material.dart';			<--- pkg which contains runApp (widget ,)
+
+	void main() {
+		runApp (
+			Center(									<--- widget "Center" something
+				child: Text(
+				"Good morning",
+				textDirection: TextDirection.ltr,	<--- ltr : left to right
+				),// Text
+			)// Center
+		);
+	}
+
+
+Print image ----------------------
+
+void main() {
+	runApp (
+		Center(
+			child: Image.network("data:image/jpeg;base64,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"),	
+		)
+	);
+
+
+Using class -------------------------
+
+import 'package:flutter/material.dart';
+
+void main() {
+
+	runApp (const HomePage());
 	
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
 
+	@override
+	Widget build (BuildContext context) {
+		return const Center(
+			child: Text(
+			"Home page",
+			textDirection: TextDirection.ltr,
+			), // Text
+		);// Center
+	}
+
+}
 
 
+-------------- Flutter Material Design -------
 
+	- MaterialApp : contient des widgets pro pour les app mobiles
+	- Scafold : très utile, contenant la structure de base d''une App mobile
+		- appBar : pour définir l''entête  --> elevation : contrôle la taille de l'ombre
+		- Body : Corps après appBar
+		
+
+
+import 'package:flutter/material.dart';
+
+void main(){
+
+runApp (const MaterialApp(
+
+	home: HomePage()
+
+	)); //MaterialApp
+
+}
+
+class HomePage extends StatelessWidget {
+
+	const HomePage({super.key});
+
+	@override
+	Widget build (BuildContext context) {
+		return Scaffold(
+			appBar: AppBar(title: const Text("Appli"), elevation: 12,),
+			body: const Center (child: Text("Bonjour"),),
+			floatingActionButton: FloatingActionButton (
+				onPressed: (){},
+				child: const Icon(Icons.add),
+			  ), // FloatingActionButton
+		); // Scaffold
+	}
+
+}
 
 
 
