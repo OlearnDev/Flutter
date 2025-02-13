@@ -744,6 +744,56 @@ class HomePage extends StatelessWidget {
 }
 
 
+--------- Stateful --------------
+
+Permet de changer le comportement des objets en cliquant par exemple sur un bouton
+
+	- Implémente la méthode CreateState
+	
+	
+	
+import 'package:flutter/material.dart';
+
+void main(){
+
+runApp (const MaterialApp(
+
+	home: HomePage()
+
+	)); //MaterialApp
+
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+
+@override
+State<HomePage> createState() {
+	  return HomePageState();
+  }
+}
+class HomePageState extends State<HomePage> {
+													<---- No need constructor here
+	int counter = 0;
+	
+	@override
+	Widget build(BuildContext context) {
+		return Scaffold(
+			appBar: AppBar(title: const Text("Appli"), elevation: 12,),
+			body: Center (child: Text("Bonjour $counter"),),
+			floatingActionButton: FloatingActionButton (
+				onPressed: (){
+					setState((){
+						counter +=1;
+					});
+				},
+				child: const Icon(Icons.add),
+			  ), // FloatingActionButton
+		); // Scaffold
+	}
+
+}
 
 
 
