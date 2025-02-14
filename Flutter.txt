@@ -795,10 +795,112 @@ class HomePageState extends State<HomePage> {
 
 }
 
+----------- Container
+
+The container allows you to create a rectangular visual element.
+
+A container can be decorated with a color, border or shadow. etc.
+
+	- pading : space inside container
+	- margin : space outside container
+
+Si on utilise la classe BoxDecoration pour un container, la couleur doit se trouver dans la decoration
+
+import 'package:flutter/material.dart';
+
+void main(){
+
+runApp (const MaterialApp(
+
+	home: HomePage()
+
+	)); //MaterialApp
+
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
 
+@override
+State<HomePage> createState() {
+	  return HomePageState();
+  }
+}
+class HomePageState extends State<HomePage> {
+
+	@override
+	Widget build (BuildContext context) {
+	return Scaffold(
+		appBar: AppBar(title: const Text("Container"), elevation: 12,),
+		body: Container(
+			child: Text("Hello"),
+			padding: const EdgeInsets.all(20),
+				margin: const EdgeInsets.all(20),
+				alignment: Alignment.center,
+				height: 200,
+				width: 400,
+				decoration: BoxDecoration(
+					color: Colors.blue,
+					borderRadius: BorderRadius.circular (10)
+				), // BoxDecoration
+			), // Container
+	); // Scaffold
+
+ }
+}
 
 
+---- Flutter Column 
+
+ Class Column here can have children, which contains a list of widgets, aligned vertically
+
+	- mainAxisAlignment  : Controls the vertical alignment of widgets
+	- crossAxisAlignment : Controls the horizontal alignment of widgets
+
+class HomePageState extends State<HomePage> {
+
+@override
+Widget build (BuildContext context) {
+return Scaffold(
+appBar: AppBar(title: const Text("Column"), elevation: 12,),
+body: Column(
+mainAxisAlignment: MainAxisAlignment.start,
+crossAxisAlignment: CrossAxisAlignment.center,
+children: [
+Text("Philippe SIMO"),
+Text('Invest in the Country'),
+Image.network("https://s.rfi.fr/media/display/ 1617994c-53db-11ee-b08b-005056bf30b7/w:980/p:16x9/
+simo%20edi%20eda%20ok%202023.jpg"),
+
+Text("Youtuber")
+
+1,
+
+), // Column
+
+); // Scaffold
+
+class HomePageState extends State<HomePage> {
+
+	@override
+	Widget build (BuildContext context) {
+	return Scaffold(
+		appBar: AppBar(title: const Text("Container"), elevation: 12,),
+		body: Column(
+		mainAxisAlignment: MainAxisAlignment.start,
+		crossAxisAlignment: CrossAxisAlignment.center,
+		children: [
+		Text("Ottawa Market"),
+		Text('Faites vos achats de viande'),
+		Image.network("https://www.google.ca/imgres?q=sell%20meat%20from%20home&imgurl=https%3A%2F%2Fi.redd.it%2F8dydp0yu4bm21.jpg&imgrefurl=https%3A%2F%2Fwww.reddit.com%2Fr%2FMealPrepSunday%2Fcomments%2Fb1gsfl%2Fwhen_the_meat_goes_on_sale_its_time_to_stock_up%2F&docid=rec17CWPgc09SM&tbnid=F_l2RdEhbGTd-M&vet=12ahUKEwjc-qO-jsKLAxVxvokEHTDPJfMQM3oECHgQAA..i&w=4032&h=3024&hcb=2&ved=2ahUKEwjc-qO-jsKLAxVxvokEHTDPJfMQM3oECHgQAA"),
+
+		Text("Détails")
+			), // Column
+	); // Scaffold
+
+ }
+}
 
 
 
