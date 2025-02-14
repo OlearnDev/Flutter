@@ -858,28 +858,6 @@ class HomePageState extends State<HomePage> {
 	- mainAxisAlignment  : Controls the vertical alignment of widgets
 	- crossAxisAlignment : Controls the horizontal alignment of widgets
 
-class HomePageState extends State<HomePage> {
-
-@override
-Widget build (BuildContext context) {
-return Scaffold(
-appBar: AppBar(title: const Text("Column"), elevation: 12,),
-body: Column(
-mainAxisAlignment: MainAxisAlignment.start,
-crossAxisAlignment: CrossAxisAlignment.center,
-children: [
-Text("Philippe SIMO"),
-Text('Invest in the Country'),
-Image.network("https://s.rfi.fr/media/display/ 1617994c-53db-11ee-b08b-005056bf30b7/w:980/p:16x9/
-simo%20edi%20eda%20ok%202023.jpg"),
-
-Text("Youtuber")
-
-1,
-
-), // Column
-
-); // Scaffold
 
 class HomePageState extends State<HomePage> {
 
@@ -893,19 +871,168 @@ class HomePageState extends State<HomePage> {
 		children: [
 		Text("Ottawa Market"),
 		Text('Faites vos achats de viande'),
-		Image.network("https://www.google.ca/imgres?q=sell%20meat%20from%20home&imgurl=https%3A%2F%2Fi.redd.it%2F8dydp0yu4bm21.jpg&imgrefurl=https%3A%2F%2Fwww.reddit.com%2Fr%2FMealPrepSunday%2Fcomments%2Fb1gsfl%2Fwhen_the_meat_goes_on_sale_its_time_to_stock_up%2F&docid=rec17CWPgc09SM&tbnid=F_l2RdEhbGTd-M&vet=12ahUKEwjc-qO-jsKLAxVxvokEHTDPJfMQM3oECHgQAA..i&w=4032&h=3024&hcb=2&ved=2ahUKEwjc-qO-jsKLAxVxvokEHTDPJfMQM3oECHgQAA"),
-
+		Image.asset('../images/meat.jpg',height: 200, width: 200,),
 		Text("Détails")
-			), // Column
+    ],
+			), // Container
 	); // Scaffold
 
- }
+}
+
+}
+
+
+---- Flutter Row 
+
+class HomePageState extends State<HomePage> {
+
+@override
+Widget build (BuildContext context) {
+
+return Scaffold(
+
+appBar: AppBar(title: const Text("Row"), elevation: 12,),
+
+
+
+); // Scaffold
+
+class HomePageState extends State<HomePage> {
+
+	@override
+	Widget build (BuildContext context) {
+	return Scaffold(
+		appBar: AppBar(title: const Text("Container"), elevation: 12,),
+		body: Row(
+			mainAxisAlignment: MainAxisAlignment.spaceAround,
+			crossAxisAlignment: CrossAxisAlignment.center,
+			children:[
+			 Icon(Icons.thumb_up),
+			Image.asset('../images/meat.jpg',height: 200, width: 200,),
+			Icon(Icons.thumb_down)
+			],
+			), // Row
+	); // Scaffold
+}
+
+}
+
+----------- ListView
+import 'package:flutter/material.dart';
+
+void main(){
+
+runApp ( MaterialApp(
+
+	home: HomePage()
+
+	)); //MaterialApp
+
+}
+
+class HomePage extends StatelessWidget {
+
+HomePage({super.key});
+
+final List images = [
+	"https://www.afrik-jeunes.net/wp-content/uploads/2021/07/ph-nw.jpg",
+	"https://cdn.camerounweb.com/imagelib/pics/374/37409828.jpg"
+	];
+
+@override
+	Widget build (BuildContext context) {
+	return Scaffold(
+		appBar: AppBar(title: const Text("ListView"), elevation: 12,),
+		body: ListView.builder(
+			itemCount: images.length,
+			itemBuilder: (centext, index) {
+			return Container(			
+			margin: const EdgeInsets.all(10),
+			child: Image.network(images [index]),
+			); // Container
+			},
+
+		) // ListView.builder
+
+	);//Scaffold
+}
+
+}
+
+On peut utiliser ListView avec separated :
+
+
+class HomePage extends StatelessWidget {
+
+HomePage({super.key});
+
+final List contacts = [
+	"Jean Claude",
+	"Pierre Durant",
+	"Albert LEBEAU",
+	"Hugo Boss"
+	];
+
+@override
+	Widget build (BuildContext context) {
+	return Scaffold(
+		appBar: AppBar(title: const Text("ListView"), elevation: 12,),
+		body: ListView.separated(
+			itemCount: contacts.length,
+			itemBuilder: (context, index) {
+			return Container(			
+				margin: const EdgeInsets.all(10),
+				child: Text(contacts [index]),
+				); // Container
+			},
+			separatorBuilder: (context, index) {
+			return const Divider();
+			},
+
+)
+		) // ListView.builder
+
+	);//Scaffold
+}
+
 }
 
 
 
 
 
+
+@override
+
+Widget build (BuildContext context) {
+
+return Scaffold(
+
+appBar: AppBar(title: const Text("ListView"), elevation: 12,),
+
+body: ListView.separated (
+
+itemCount: contacts.length,
+
+itemBuilder: (centext, index) {
+
+return Container(
+
+margin: const EdgeInsets.all(10),
+
+child: Text(contacts [index]),
+
+); // Container
+
+},
+
+separatorBuilder: (context, index) {
+
+return const Divider();
+
+},
+
+) // ListView.separated
 
 
 
